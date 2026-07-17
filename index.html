@@ -2,63 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verto Room Reservation</title>
+    <!-- Favicon link -->
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABd1BMVEVHcExyqa+cyslfpa13taeextB5vNfb3teEwYiJu8A7spujy0JytHaGvV9bn6hPktN5vON7rsCQwo9dr6SXxIxUnq9WnqhcpeOCvN9cpq5DuaL948OMvJtJoLhsvqqQxuNiqcdwueJ1uOSaw6llqN+DvZRCjdRpuKtapIx+xLJdq+ulxnjL3L11vOFbmdR2xbtlvL+PwXmYx4IvftRmu6lswLGw1LFtt+yI0fSN0fGGy/RLo9hrtduvzVowgNN/vZBYmc6HyO98xuydyoI0gttDh9H/APZTuaJwsu5SprZxuZhosqFNpe1hr6c4lOaIxINbsPFGnutstZ1YqbFjtvNwwfQZe+F4u5FNpLtcq6sxj+hIp9hRrNspiOZUq/E/muqVxUxpu/Rbsd8ig+RMnpV8uWd2t3Z2xvaTyHtApNg3n9WJwFdmr4FitOIRdOCAzfdruONEmaxeqopVrt9nrpMCa+AusZNXp5ZytYsWqYhOoX5QwLAviskGLL92AAAASHRSTlMATCDOPRpeB/4r7fz8/YZqnyWTa3HDpr172/0BYPCaOKCuj0t4wZ+M8aj5URDzUXqlrtOscb443+jO1/TfkNLjLozKudHTAf3mxShPAAACUElEQVQ4jW2TaVfaQBSGbyBkQWUH2URAVLSta7X7vh2C4MISESiWRhpRUFYR/fG9M4mWovMh52SeJ/fOTN4BGB32Fat15WMAHh/cdCV9VP6dz+ffWx/BseWdfSKU08VOtcGNY8OLvZ9USJ8WS9XG5dwYn/2V1YS6xm1g+PF8lOd0QedegIC/z95z0x9deFNE/jZqok0lJ38nvNaFGACvT7o2VHV744u+vQtNmL4vOSfs7qqqalId9PWlJlC+uortHch3XeBYd6mkoOmCClHAA1y7uQnBvCAIRADVQJ4Ar1CIiLSY0+/n5mWBGkHoui1uOv30frkAZkn+wANp0mU8Ldb9j/Aiy7BiICTL8/giyErLJ7YsjE6frE/WJs/b7asrSZJlBx8cKIrSMszMbGu7mjqbOkHhvH11IOGQl3hFcVtaTo9xiX5+fIzCCRGSB8SQJTAqAB43832LLHFCE7BEEgWiDBknCpZECEiFd0Q4Q6GbSmlGfOixKxYw2s0QQmFigpaopVJEQCVoGcYh7jHzYIZFFIyDWm3QLWQKBU0JLm6xbB/pwuYtT0LBHeJIZFAgRlIEpxmgz31tNnu9bzQTM8gTmlHw4aGyfZzD7KJxSwIesB/qRqZAWoJ4DbEySXezt6knyqcpPu2P8ddeEn9i2O9+BBM2GsPYb9Zri9jWrvfTR9QYvR6kmffZZaPaKRVPKxVqLPwffQPBJcQ7GG9yhcY4ROjH9Tqml9yQ9IPrx5SQ1jvZLDWmTeMct/c5l6Px3VsOiw8xXQb3yWaLcobRub9s+qhfKmFnNQAAAABJRU5ErkJggg==">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f7f6;
-        }
-        .container {
-            text-align: center;
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 400px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: #ffffff;
-            background-color: #4285f4;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-top: 20px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #357ae8;
-        }
-        .note {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #666;
-            line-height: 1.5;
-        }
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f7f6; }
+        .container { text-align: center; padding: 40px; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 450px; }
+        .btn { display: inline-block; padding: 15px 30px; font-size: 18px; color: #ffffff; background-color: #4285f4; text-decoration: none; border-radius: 6px; margin-top: 20px; }
+        .note { margin-top: 25px; font-size: 14px; color: #555; border-top: 1px solid #eee; padding-top: 15px; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Verto Room Reservation</h1>
-        <p>Click the button below to open the reservation system.</p>
+        <p>Please click below to access the reservation system.</p>
         
-        <a href="https://script.google.com/macros/s/AKfycbyoaO3hiuPo4B3w1PLHrWPQzMYzApEzCVpAa1-VHZrJZZ_9V7Nh-4hEs-J-wlzJtPIpTQ/exec" 
+        <a href="https://script.google.com/macros/s/AKfycbyyILjfoSocMk1Sft5SuEUVBaWVHpvH14ZtQU6CRwp1Qy6U_c3YDWpbPvlXH_xfSBlFFg/exec" 
            target="_blank" 
            class="btn">
            Open Reservation App
         </a>
 
         <div class="note">
-            <p><strong>Note:</strong> If you see an error, please open this link in an <strong>Incognito or Private window</strong>. This is caused by Google's account session settings.</p>
+            <p><strong>Troubleshooting:</strong> If you see a "Not Found" error, it is likely due to multiple Google accounts logged into your browser. Please try opening this link in an <strong>Incognito or Private window</strong>.</p>
         </div>
     </div>
 
