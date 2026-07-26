@@ -63,9 +63,43 @@
         height:100%;
         border:none;
     }
+
+   .btn{
+    background:#4285f4;
+    color:#fff;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:6px;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+.btn:disabled{
+    background:#7aa7f8;
+    cursor:not-allowed;
+}
+
+.spinner{
+    width:18px;
+    height:18px;
+    border:3px solid rgba(255,255,255,.4);
+    border-top:3px solid #fff;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+    display:none;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
 </style>
 </head>
-
 <body>
 
 <div class="container" id="landingPage">
@@ -74,9 +108,15 @@
 
     <p>Please click below to access the reservation system.</p>
 
-    <button class="btn" onclick="openReservation()">
-        Open Reservation App
-    </button>
+<button
+    id="openBtn"
+    class="btn"
+    onclick="openReservation()">
+
+    <span class="spinner" id="spinner"></span>
+    <span id="btnText">Open Reservation App</span>
+
+</button>
 
     <div class="note">
         <strong>Troubleshooting:</strong><br><br>
@@ -96,15 +136,24 @@
 </div>
 
 <script>
-function openReservation(){
+function openReservation() {
 
-    document.getElementById("landingPage").style.display="none";
+    const btn = document.getElementById("openBtn");
+    const spinner = document.getElementById("spinner");
+    const text = document.getElementById("btnText");
+    const frame = document.getElementById("reservationFrame");
 
-    document.getElementById("appContainer").style.display="block";
+    btn.disabled = true;
+    spinner.style.display = "inline-block";
+    text.textContent = "Loading...";
 
-    document.getElementById("reservationFrame").src =
+    frame.onload = function () {
+        document.getElementById("landingPage").style.display = "none";
+        document.getElementById("appContainer").style.display = "block";
+    };
+
+    frame.src =
         "https://script.google.com/macros/s/AKfycby5NEZ_0Yw23IXETzWxmbz-g8wk9mM4Bhy4sJov8NM9Oq4F5GvwX4CgHeGPKnto_nxIuA/exec";
-
 }
 </script>
 
