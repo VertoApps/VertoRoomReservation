@@ -32,17 +32,27 @@ body{
 
 .card{
     width:100%;
-    max-width:550px;
+    max-width:560px;
     background:#fff;
-    border-radius:20px;
-    padding:50px;
+    border-radius:24px;
+    padding:60px 50px;
     text-align:center;
-    box-shadow:0 15px 45px rgba(0,0,0,.08);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08),
+        0 2px 8px rgba(0,0,0,.04);
+    border:1px solid #eef2f7;
 }
 
 .logo{
-    font-size:60px;
-    margin-bottom:20px;
+    margin-bottom:30px;
+}
+
+.logo img{
+    width:220px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto;
 }
 
 h1{
@@ -157,7 +167,11 @@ iframe{
 
     <div class="card">
 
-        <div class="logo">📅</div>
+        <div class="logo">
+    <img
+        src="https://vertocommunications.com/wp-content/uploads/2024/09/Verto-Logo.png"
+        alt="Verto Communications Logo">
+</div>
 
         <h1>Verto Room Reservation</h1>
 
